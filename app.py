@@ -56,6 +56,7 @@ def sendData():
 
     pb = PushBullet(user_token)
     push = pb.push_note("Alert", "A seizure has occured! Time: " + str(seizure_time) + " | Location: " + str(seizure_loc))
+    # print(push)
     return jsonify(0)
     
 
