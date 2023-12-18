@@ -55,7 +55,7 @@ def sendData():
     
 
     pb = PushBullet(user_token)
-    push = pb.push_note("Alert", "A seizure has occured! Time: " + str(seizure_time) + " | Location: " + str(seizure_loc))
+    push = pb.push_note("Alert", "A seizure has occured! Time: " + str(seizure_time) + " | Location: " + "https://www.google.com/maps/search/?api=1&query="+str(seizure_loc)[-17:-10]+ "," + str(seizure_loc)[-8:-1])
     # print(push)
     return jsonify(0)
     
